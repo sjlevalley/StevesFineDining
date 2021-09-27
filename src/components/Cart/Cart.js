@@ -6,11 +6,8 @@ import classes from './Cart.module.css'
 import CartContext from '../../store/cart-context';
 
 export default function Cart(props) {
-
     const [isCheckout, setIsCheckout] = useState(false)
-
     const cartContext = useContext(CartContext)
-
     const totalAmount = `${cartContext.totalAmount.toFixed(2)}`
     const hasItems = cartContext.items.length > 0
 
@@ -46,14 +43,12 @@ export default function Cart(props) {
     return (
         <Modal onClose={props.onClose} className={classes.cart}>
             {cartItems}
-
             <div className={classes.total}>
                 <span>Total Amount</span>
                 <span>{totalAmount}</span>
             </div>
             {isCheckout && <Checkout onCancel={props.onClose} />}
             {!isCheckout && modalActions}
-
         </Modal>
     )
 }
