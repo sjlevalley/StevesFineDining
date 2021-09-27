@@ -10,9 +10,7 @@
 
 .modal {
   position: fixed;
-  overflow: scroll;
-  top: 5vh;
-  bottom: 5vh;
+  top: 15vh;
   left: 5%;
   width: 90%;
   background-color: white;
