@@ -5,12 +5,12 @@ import classes from './MealItem.module.css';
 import CartContext from '../../../store/cart-context';
 
 const MealItem = (props) => {
-  const cartCtx = useContext(CartContext);
+  const cartContext = useContext(CartContext);
 
   const price = `$${props.price.toFixed(2)}`;
 
   const addToCartHandler = amount => {
-    cartCtx.addItem({
+    cartContext.addItem({
       id: props.id,
       name: props.name,
       amount: amount,

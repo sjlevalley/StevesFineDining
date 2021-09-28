@@ -9,10 +9,12 @@ const AvailableMeals = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState();
 
+  const URL = 'https://react-http-2d840-default-rtdb.firebaseio.com/meals.json'
+
   useEffect(() => {
     const fetchMeals = async () => {
       const response = await fetch(
-        'https://react-http-6b4a6.firebaseio.com/meals.json'
+        URL
       );
 
       if (!response.ok) {
@@ -45,7 +47,7 @@ const AvailableMeals = () => {
   if (isLoading) {
     return (
       <section className={classes.MealsLoading}>
-        <p>Loading...</p>
+        <p>Retrieving available meals...</p>
       </section>
     );
   }
