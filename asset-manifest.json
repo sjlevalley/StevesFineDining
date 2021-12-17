@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/StevesFineDining/static/css/main.eedacf12.chunk.css",
+    "main.js": "/StevesFineDining/static/js/main.df5c5e45.chunk.js",
+    "main.js.map": "/StevesFineDining/static/js/main.df5c5e45.chunk.js.map",
+    "runtime-main.js": "/StevesFineDining/static/js/runtime-main.8524ece8.js",
+    "runtime-main.js.map": "/StevesFineDining/static/js/runtime-main.8524ece8.js.map",
+    "static/js/2.50c7a7de.chunk.js": "/StevesFineDining/static/js/2.50c7a7de.chunk.js",
+    "static/js/2.50c7a7de.chunk.js.map": "/StevesFineDining/static/js/2.50c7a7de.chunk.js.map",
+    "index.html": "/StevesFineDining/index.html",
+    "static/css/main.eedacf12.chunk.css.map": "/StevesFineDining/static/css/main.eedacf12.chunk.css.map",
+    "static/js/2.50c7a7de.chunk.js.LICENSE.txt": "/StevesFineDining/static/js/2.50c7a7de.chunk.js.LICENSE.txt",
+    "static/media/meals.2971f633.jpg": "/StevesFineDining/static/media/meals.2971f633.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8524ece8.js",
+    "static/js/2.50c7a7de.chunk.js",
+    "static/css/main.eedacf12.chunk.css",
+    "static/js/main.df5c5e45.chunk.js"
+  ]
+}
