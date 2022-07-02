@@ -11,7 +11,6 @@
 .modal {
   position: fixed;
   top: 3vh;
-  /* bottom: 3vh; */
   left: 5%;
   width: 90%;
   background-color: white;

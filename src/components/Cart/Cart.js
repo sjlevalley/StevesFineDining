@@ -3,7 +3,7 @@ import CartContext from '../../store/cart-context'
 import CartItem from './CartItem'
 import Checkout from './Checkout'
 import classes from './Cart.module.css'
-import Modal from '../UI/Modal'
+import Modal from '../UI/Modal.jsx'
 
 const Cart = props => {
   const [btnIsHighlighted, setBtnIsHighlighted] = useState(false)
