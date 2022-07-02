@@ -1,7 +1,7 @@
-import { Fragment } from "react";
-import styled from "styled-components";
-import HeaderCartButton from "./HeaderCartButton.jsx";
-import mealsImage2 from "../../assets/mealsImage2.jpg";
+import { Fragment } from 'react'
+import styled from 'styled-components'
+import HeaderCartButton from './HeaderCartButton.jsx'
+import mealsImage2 from '../../assets/mealsImage2.jpg'
 
 const StyledHeader = styled.header`
   align-items: center;
@@ -18,7 +18,7 @@ const StyledHeader = styled.header`
   top: 0;
   width: 100%;
   z-index: 10;
-`;
+`
 
 const StyledMainImage = styled.div`
   height: 35rem;
@@ -31,9 +31,9 @@ const StyledMainImage = styled.div`
     transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
     width: 110%;
   }
-`;
+`
 
-const Header = (props) => {
+const Header = props => {
   return (
     <Fragment>
       <StyledHeader>
@@ -41,10 +41,10 @@ const Header = (props) => {
         <HeaderCartButton onClick={props.onShowCart} />
       </StyledHeader>
       <StyledMainImage>
-        <img src={mealsImage2} alt="A table full of delicious food!" />
+        <img src={mealsImage2} alt='A table full of delicious food!' />
       </StyledMainImage>
     </Fragment>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

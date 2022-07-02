@@ -1,6 +1,6 @@
-import { Fragment } from "react";
-import MealsSummary from "./MealsSummary.jsx";
-import AvailableMeals from "./AvailableMeals.jsx";
+import { Fragment } from 'react'
+import MealsSummary from './MealsSummary.jsx'
+import AvailableMeals from './AvailableMeals.jsx'
 
 const Meals = () => {
   return (
@@ -8,7 +8,7 @@ const Meals = () => {
       <MealsSummary />
       <AvailableMeals />
     </Fragment>
-  );
-};
+  )
+}
 
-export default Meals;
+export default Meals

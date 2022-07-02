@@ -1,7 +1,7 @@
-import { useContext } from "react";
-import styled from "styled-components";
-import MealItemForm from "./MealItemForm.jsx";
-import CartContext from "../../../store/cart-context";
+import { useContext } from 'react'
+import styled from 'styled-components'
+import MealItemForm from './MealItemForm.jsx'
+import CartContext from '../../../store/cart-context'
 
 const StyledListItem = styled.li`
   border-bottom: 1px solid #ccc;
@@ -12,30 +12,30 @@ const StyledListItem = styled.li`
   h3 {
     margin: 0 0 0.25rem 0;
   }
-`;
+`
 const StyledDescriptionDiv = styled.div`
   font-style: italic;
-`;
+`
 const StyledPrice = styled.div`
   color: #ad5502;
   font-size: 1.25rem;
   font-weight: bold;
   margin-top: 0.25rem;
-`;
+`
 
-const MealItem = (props) => {
-  const cartContext = useContext(CartContext);
+const MealItem = props => {
+  const cartContext = useContext(CartContext)
 
-  const price = `$${props.price.toFixed(2)}`;
+  const price = `$${props.price.toFixed(2)}`
 
-  const addToCartHandler = (amount) => {
+  const addToCartHandler = amount => {
     cartContext.addItem({
       id: props.id,
       name: props.name,
       amount: amount,
-      price: props.price,
-    });
-  };
+      price: props.price
+    })
+  }
 
   return (
     <StyledListItem>
@@ -48,7 +48,7 @@ const MealItem = (props) => {
         <MealItemForm onAddToCart={addToCartHandler} />
       </div>
     </StyledListItem>
-  );
-};
+  )
+}
 
-export default MealItem;
+export default MealItem

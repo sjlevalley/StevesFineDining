@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledInput = styled.div`
   align-items: center;
@@ -16,14 +16,14 @@ const StyledInput = styled.div`
     font: inherit;
     padding-left: 0.5rem;
   }
-`;
+`
 const Input = React.forwardRef((props, ref) => {
   return (
     <StyledInput>
       <label htmlFor={props.input.id}>{props.label}</label>
       <input ref={ref} {...props.input} />
     </StyledInput>
-  );
-});
+  )
+})
 
-export default Input;
+export default Input
