@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/StevesFineDining/static/css/main.01ccc637.chunk.css",
-    "main.js": "/StevesFineDining/static/js/main.f9ed76e8.chunk.js",
-    "main.js.map": "/StevesFineDining/static/js/main.f9ed76e8.chunk.js.map",
+    "main.css": "/StevesFineDining/static/css/main.4559308c.chunk.css",
+    "main.js": "/StevesFineDining/static/js/main.cdb3bc8d.chunk.js",
+    "main.js.map": "/StevesFineDining/static/js/main.cdb3bc8d.chunk.js.map",
     "runtime-main.js": "/StevesFineDining/static/js/runtime-main.8524ece8.js",
     "runtime-main.js.map": "/StevesFineDining/static/js/runtime-main.8524ece8.js.map",
-    "static/js/2.50c7a7de.chunk.js": "/StevesFineDining/static/js/2.50c7a7de.chunk.js",
-    "static/js/2.50c7a7de.chunk.js.map": "/StevesFineDining/static/js/2.50c7a7de.chunk.js.map",
+    "static/js/2.3b1e359e.chunk.js": "/StevesFineDining/static/js/2.3b1e359e.chunk.js",
+    "static/js/2.3b1e359e.chunk.js.map": "/StevesFineDining/static/js/2.3b1e359e.chunk.js.map",
     "index.html": "/StevesFineDining/index.html",
-    "static/css/main.01ccc637.chunk.css.map": "/StevesFineDining/static/css/main.01ccc637.chunk.css.map",
-    "static/js/2.50c7a7de.chunk.js.LICENSE.txt": "/StevesFineDining/static/js/2.50c7a7de.chunk.js.LICENSE.txt",
+    "static/css/main.4559308c.chunk.css.map": "/StevesFineDining/static/css/main.4559308c.chunk.css.map",
+    "static/js/2.3b1e359e.chunk.js.LICENSE.txt": "/StevesFineDining/static/js/2.3b1e359e.chunk.js.LICENSE.txt",
     "static/media/mealsImage2.484439d1.jpg": "/StevesFineDining/static/media/mealsImage2.484439d1.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8524ece8.js",
-    "static/js/2.50c7a7de.chunk.js",
-    "static/css/main.01ccc637.chunk.css",
-    "static/js/main.f9ed76e8.chunk.js"
+    "static/js/2.3b1e359e.chunk.js",
+    "static/css/main.4559308c.chunk.css",
+    "static/js/main.cdb3bc8d.chunk.js"
   ]
 }
