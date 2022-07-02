@@ -1,55 +1,54 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
-import Card from '../UI/Card';
-import MealItem from './MealItem/MealItem';
-import classes from './AvailableMeals.module.css';
+import Card from '../UI/Card'
+import MealItem from './MealItem/MealItem'
+import classes from './AvailableMeals.module.css'
 
 const AvailableMeals = () => {
-  const [meals, setMeals] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [httpError, setHttpError] = useState();
+  const [meals, setMeals] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [httpError, setHttpError] = useState()
 
-  const URL = 'https://steves-fine-dining-default-rtdb.firebaseio.com/meals.json'
+  const URL =
+    'https://steves-fine-dining-default-rtdb.firebaseio.com/meals.json'
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch(
-        URL
-      );
+      const response = await fetch(URL)
 
       if (!response.ok) {
-        throw new Error('Something went wrong!');
+        throw new Error('Something went wrong!')
       }
 
-      const responseData = await response.json();
+      const responseData = await response.json()
 
-      const loadedMeals = [];
+      const loadedMeals = []
 
       for (const key in responseData) {
         loadedMeals.push({
           id: key,
           name: responseData[key].name,
           description: responseData[key].description,
-          price: responseData[key].price,
-        });
+          price: responseData[key].price
+        })
       }
 
-      setMeals(loadedMeals);
-      setIsLoading(false);
-    };
+      setMeals(loadedMeals)
+      setIsLoading(false)
+    }
 
-    fetchMeals().catch((error) => {
-      setIsLoading(false);
-      setHttpError(error.message);
-    });
-  }, []);
+    fetchMeals().catch(error => {
+      setIsLoading(false)
+      setHttpError(error.message)
+    })
+  }, [])
 
   if (isLoading) {
     return (
       <section className={classes.MealsLoading}>
         <p>Retrieving available meals...</p>
       </section>
-    );
+    )
   }
 
   if (httpError) {
@@ -57,10 +56,10 @@ const AvailableMeals = () => {
       <section className={classes.MealsError}>
         <p>{httpError}</p>
       </section>
-    );
+    )
   }
 
-  const mealsList = meals.map((meal) => (
+  const mealsList = meals.map(meal => (
     <MealItem
       key={meal.id}
       id={meal.id}
@@ -68,7 +67,7 @@ const AvailableMeals = () => {
       description={meal.description}
       price={meal.price}
     />
-  ));
+  ))
 
   return (
     <section className={classes.meals}>
@@ -76,7 +75,7 @@ const AvailableMeals = () => {
         <ul>{mealsList}</ul>
       </Card>
     </section>
-  );
-};
+  )
+}
 
-export default AvailableMeals;
+export default AvailableMeals

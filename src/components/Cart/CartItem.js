@@ -1,7 +1,30 @@
-import classes from './CartItem.module.css';
+import { useState, useContext, useEffect } from 'react'
+import CartContext from '../../store/cart-context'
+import classes from './CartItem.module.css'
 
-const CartItem = (props) => {
-  const price = `$${props.price.toFixed(2)}`;
+const CartItem = props => {
+  const [btnIsHighlighted, setBtnIsHighlighted] = useState(false)
+
+  const price = `$${props.price.toFixed(2)}`
+  const cartCtx = useContext(CartContext)
+  const { items } = cartCtx
+
+  useEffect(() => {
+    if (items.length === 0) {
+      return
+    }
+    setBtnIsHighlighted(true)
+
+    const timer = setTimeout(() => {
+      setBtnIsHighlighted(false)
+    }, 300)
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [items])
+
+  const btnClasses = `${classes.button} ${btnIsHighlighted ? classes.bump : ''}`
 
   return (
     <li className={classes['cart-item']}>
@@ -13,11 +36,15 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className={classes.actions}>
-        <button onClick={props.onRemove}>−</button>
-        <button onClick={props.onAdd}>+</button>
+        <button className={btnClasses} onClick={props.onRemove}>
+          −
+        </button>
+        <button className={btnClasses} onClick={props.onAdd}>
+          +
+        </button>
       </div>
     </li>
-  );
-};
+  )
+}
 
-export default CartItem;
+export default CartItem
